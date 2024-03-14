@@ -1,0 +1,12 @@
+import { Stripe, loadStripe } from "@stripe/stripe-js";
+
+let stripePromise: Promise<Stripe | null>;
+export function getStripe(connectedAccountId?: string) {
+	if (!stripePromise) {
+		stripePromise = loadStripe(
+			process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? "",
+			{ stripeAccount: connectedAccountId },
+		);
+	}
+	return stripePromise;
+}

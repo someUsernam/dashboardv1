@@ -2,32 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --gradient: #000C40;
+    --background: 243 100% 98.26%;
+    --foreground: 243 10% 0.52%;
+
+    --muted: 243 10% 91.3%;
+    --muted-foreground: 243 5% 41.3%;
+
+    --popover: 243 10% 91.3%;
+    --popover-foreground: 243 10% 0.65%;
+
+    --card: 243 10% 91.3%;
+    --card-foreground: 243 10% 0.65%;
+
+    --border: 243 15% 89.52%;
+    --input: 243 15% 89.52%;
+
+    --primary: 243 100% 13%;
+    --primary-foreground: 243 2% 91.3%;
+
+    --secondary: 243 5% 95.65%;
+    --secondary-foreground: 243 7% 11.3%;
+
+    --accent: 243 5% 95.65%;
+    --accent-foreground: 243 7% 11.3%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 243 100% 13%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --gradient: #CCCCB2;
+
+    --background: 64 13% 6%;
+    --foreground: 64 2% 98.75%;
+
+    --muted: 64 10% 22.5%;
+    --muted-foreground: 64 2% 57.5%;
+
+    --popover: 64 61% 9.75%;
+    --popover-foreground: 64 2% 98.75%;
+
+    --card: 64 61% 9.75%;
+    --card-foreground: 64 2% 98.75%;
+
+    --border: 64 10% 22.5%;
+    --input: 64 10% 22.5%;
+
+    --primary: 64 20% 75%;
+    --primary-foreground: 64 2% 7.5%;
+
+    --secondary: 64 10% 22.5%;
+    --secondary-foreground: 64 2% 98.75%;
+
+    --accent: 64 10% 22.5%;
+    --accent-foreground: 64 2% 98.75%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 64 2% 98.75%;
+
+    --ring: 64 20% 75%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.dotPattern {
+  background-image: radial-gradient(rgb(35, 40, 68) 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+.use-automation-zoom-in {
+  animation: automation-zoom-in 0.5s;
+}
+
+@keyframes automation-zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
