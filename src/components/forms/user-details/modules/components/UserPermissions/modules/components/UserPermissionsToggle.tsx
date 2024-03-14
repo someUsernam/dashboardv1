@@ -8,8 +8,7 @@ import {
 	saveActivityLogsNotification,
 } from "@/lib/queries";
 import { useModal } from "@/providers/modal-provider";
-import { User } from "@clerk/nextjs";
-import { Prisma, SubAccount } from "@prisma/client";
+import { Prisma, SubAccount, User } from "@prisma/client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
