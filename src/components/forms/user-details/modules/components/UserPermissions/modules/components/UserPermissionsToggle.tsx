@@ -16,7 +16,7 @@ import { toast } from "sonner";
 type UserPermissionsToggleProps = {
 	subAccount: SubAccount;
 	authUserData: Prisma.PromiseReturnType<typeof getAuthUserDetails>;
-	userData: Partial<User>;
+	userData: Partial<User> | undefined;
 	subAccountId: string | null;
 	type: "agency" | "subaccount";
 };
