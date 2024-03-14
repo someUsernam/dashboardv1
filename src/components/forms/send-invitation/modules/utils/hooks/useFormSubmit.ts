@@ -21,7 +21,7 @@ export function useFormSubmit(agencyId: string) {
 			console.log(res, agencyId);
 			await saveActivityLogsNotification({
 				agencyId: agencyId,
-				description: `Invited ${res.email}`,
+				description: `Invited | ${values.email}`,
 				subaccountId: undefined,
 			});
 			toast.success("Success", {
