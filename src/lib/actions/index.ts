@@ -13,7 +13,7 @@ import { getMedia } from "./getMedia";
 import { getNotificationAndUser } from "./getNotificationAndUser";
 import { getPipelineDetails } from "./getPipelineDetails";
 import { getSubaccountDetails } from "./getSubaccountDetails";
-import { getUser } from "./getUser";
+import { getUserById } from "./getUserById";
 import { getUserByEmail } from "./getUserByEmail";
 import { getUserPermissions } from "./getUserPermissions";
 import { initUser } from "./initUser";
@@ -45,7 +45,7 @@ export {
 	getNotificationAndUser,
 	getPipelineDetails,
 	getSubaccountDetails,
-	getUser,
+	getUserById,
 	getUserByEmail,
 	getUserPermissions,
 	initUser,
