@@ -197,4 +197,4 @@ export const addOnProducts = [
 	{ title: "Priority Support", id: "prod_PdfhEW2gsdTpqN" },
 ];
 
-export const SITE_NAME = "Redneck";
+export const SITE_NAME = "Acme";
