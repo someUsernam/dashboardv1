@@ -22,9 +22,6 @@ export function useFormSubmit(
 	const router = useRouter();
 	const { data, setClose } = useModal();
 
-	console.log("userData", userData);
-	console.log("data", data);
-
 	const form = useForm<z.infer<typeof userDetailsFormSchema>>({
 		resolver: zodResolver(userDetailsFormSchema),
 		mode: "onChange",

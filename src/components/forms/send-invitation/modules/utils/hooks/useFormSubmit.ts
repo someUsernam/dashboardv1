@@ -18,7 +18,6 @@ export function useFormSubmit(agencyId: string) {
 	const onSubmit = async (values: z.infer<typeof sendInvitationScheme>) => {
 		try {
 			const res = await sendInvitation(values.role, values.email, agencyId);
-			console.log(res, agencyId);
 			await saveActivityLogsNotification({
 				agencyId: agencyId,
 				description: `Invited | ${values.email}`,

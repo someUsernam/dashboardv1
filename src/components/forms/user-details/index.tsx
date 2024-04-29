@@ -24,8 +24,6 @@ function UserDetails({ id, type, subAccounts, userData }: UserDetailsProps) {
 	const authUserData = useFetchUserDetails(userData);
 	const { form, handleSubmit } = useFormSubmit(userData, id, authUserData);
 
-	console.log("userData", userData);
-
 	return (
 		<Card className="w-full">
 			<Header />

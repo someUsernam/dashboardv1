@@ -3,7 +3,7 @@ import { Sidebar } from "@/components/Sidebar";
 import { Toaster } from "@/components/ui/sonner";
 import { getNotificationAndUser, verifyAndAcceptInvite } from "@/lib/queries";
 import ModalProvider from "@/providers/modal-provider";
-import { currentUser } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 import BlurPage from "@ui/blur-page";
 import { redirect } from "next/navigation";
 import { Suspense } from "react";
