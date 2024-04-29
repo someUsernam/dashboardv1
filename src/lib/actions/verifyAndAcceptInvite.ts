@@ -1,6 +1,6 @@
 "use server";
 
-import { clerkClient, currentUser } from "@clerk/nextjs";
+import { clerkClient, currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { db } from "../db";
 import { createTeamUser } from "./createTeamUser";

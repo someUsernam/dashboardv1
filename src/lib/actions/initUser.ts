@@ -1,6 +1,6 @@
 "use server";
 
-import { clerkClient, currentUser } from "@clerk/nextjs";
+import { clerkClient, currentUser } from "@clerk/nextjs/server";
 import { User } from "@prisma/client";
 import { db } from "../db";
 

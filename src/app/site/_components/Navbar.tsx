@@ -1,7 +1,7 @@
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { SITE_NAME } from "@/lib/consts";
-import { UserButton, auth } from "@clerk/nextjs";
-import { User } from "@clerk/nextjs/server";
+import { UserButton } from "@clerk/nextjs";
+import { User, auth } from "@clerk/nextjs/server";
 import Link from "next/link";
 
 type Props = {
@@ -13,12 +13,6 @@ function Navbar({ user }: Props) {
 	return (
 		<div className="fixed w-full top-0 p-4 flex items-center justify-between z-10 backdrop-blur-sm">
 			<aside className="flex items-center gap-2">
-				{/* <Image
-					src={"./assets/logo.svg"}
-					width={40}
-					height={40}
-					alt={`${SITE_NAME} logo`}
-				/> */}
 				<span className="text-xl font-bold">{SITE_NAME}.</span>
 			</aside>
 			<nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">

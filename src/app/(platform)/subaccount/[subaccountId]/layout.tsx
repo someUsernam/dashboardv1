@@ -7,7 +7,7 @@ import {
 	getNotificationAndUser,
 	verifyAndAcceptInvite,
 } from "@/lib/queries";
-import { currentUser } from "@clerk/nextjs";
+import { currentUser } from "@clerk/nextjs/server";
 import { Role } from "@prisma/client";
 import { redirect } from "next/navigation";
 

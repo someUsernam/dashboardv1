@@ -78,7 +78,7 @@ function SomeChart() {
 			colors={["indigo", "rose"]}
 			valueFormatter={dataFormatter}
 			yAxisWidth={60}
-			onValueChange={(v) => console.log(v)}
+			// onValueChange={(v) => (v)}
 		/>
 	);
 }
